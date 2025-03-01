@@ -1,0 +1,35 @@
+.dropdown-menu.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 0;
+    z-index: 1050;
+}
+.nav-item .dropdown-menu.show {
+    display: block;
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var mainDropdown = document.getElementById('navbarDropdown');
+    mainDropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    document.querySelectorAll('.dropdown-item.dropdown-toggle').forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var submenu = this.nextElementSibling;
+            submenu.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('click', function() {
+        document.querySelectorAll('.submenu').forEach(function(menu) {
+            menu.classList.remove('show');
+        });
+    });
+});

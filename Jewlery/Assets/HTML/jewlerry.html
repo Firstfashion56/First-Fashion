@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery | First Fashion</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="/Assets/css/ff.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="website icon" type="jpg" href="/Logo/firstfashionlogo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- boostrap css -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- boostrap css -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<style>
+    
+    .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-a {
+    border: 1px solid #bf7276;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    background: white;
+}
+
+.card-a img {
+    width: 100%;
+    height: 190px;
+    max-width: 190px;
+    transition: transform 0.3s;
+}
+.card-a h3{
+    margin-top: 15px;
+    font-weight: 600;
+}
+.card-a h3, .card p, .add-to-cart {
+    font-size: 1rem;
+}
+
+.card-a:hover {
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    background-color: #ff6600;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.add-to-cart:hover {
+    background-color: #cc5200;
+}
+
+
+@media (max-width: 768px) {
+    .card h3, .card p, .add-to-cart {
+        font-size: 0.8rem;
+    }
+    .card img {
+        max-width: 120px;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --main-color: #c8815f;
+    --bif-font: 4.2rem;
+    --h2-font:3rem;
+    --h3-font: 1.8rem;
+    --normal-font: 1rem;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    padding: 14px 10%;
+    transition: all .35s ease;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+
+
+}
+.logo{
+    font-size: 24px;
+    font-weight: 560;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    font-family: lobster;
+    margin-bottom: 13px;
+    margin-left: -70px;
+    
+    
+}
+.img-nv{
+    height: 50px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 140px;
+    margin-bottom: 11px;
+    gap: 20px;
+    
+}
+.navlist{
+    display: flex;
+    font-weight: bolder;
+    text-decoration: none;
+   
+    
+}
+.navlist a{
+    font-family: poppins;
+ color: var(--text-color);
+ font-weight: 550;
+ padding: 6px 18px;
+ font-size: 18px;
+ transition: all .36s ease;
+ margin-top: 10px;
+ 
+}
+.navlist a:hover{
+    color: var(--main-color);
+
+}
+.header-icons i{
+    font-size: 38px;
+    color: var(--text-color);
+    margin-right: 20px;
+    transition: all .36s ease;
+}
+.header-icons i:hover{
+    color: var(--main-color);
+
+}
+#menu-icon{
+    font-size: 34px;
+    color: var(--text-color);
+    z-index: 10001;
+    margin-right: 20px;
+    display: none;
+
+}
+header.sticky{
+    background: var(--bg-color);
+    padding: 14px 14%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 /10);
+}
+@media  (max-width : 1000px){
+    header{
+        padding: 7px;
+        transition: .2s;
+    }
+    header.sticky{
+        padding: 14PX 4%;
+    }
+    section{
+        padding: 80p 4%;
+        transition: .1s;
+
+    }
+}
+@media (max-width : 400px){
+   .logo{
+    margin-right: -35px;
+    font-size: 18px;
+   }
+   
+}
+
+@media screen and (max-width: 1100px) {
+ 
+ header{
+     width: 100%;
+     height: 75px;
+     top: 0;
+     right: 0;
+     z-index: 1000;
+     position: fixed;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     background: transparent;
+     transition: all .35s ease;
+     text-decoration: none;
+     backdrop-filter: blur(5px);
+ }
+ #fflogo{
+ 
+     margin-bottom: 15px;
+     font-size: 15px;
+    }
+ #ifflogo{
+     width: 30px;
+     height: 30px;
+    }
+ .img-nv{
+     height: 20px;
+     width: 50px;
+     border-radius: 50%;
+ 
+     margin-bottom: 11px;
+     gap: 20px;
+     
+ }
+ .navlist{
+     display: flex;
+     font-weight: bold;
+     text-decoration: none;
+     padding-left: -20px;
+ }
+ .navlist a{
+     font-family: poppins;
+  color: var(--text-color);
+  font-weight: 550;
+  font-size: 13px;
+  transition: all .36s ease;
+  margin-top: 10px;
+  gap: -15px;
+ }
+ .navlist a:hover{
+     color: var(--main-color);
+ 
+ }
+ .header-icons i{
+     font-size: 20px;
+     color: var(--text-color);
+     padding-right: -20px;
+     margin-right: 10px;
+     transition: all .36s ease;
+ }
+ .header-icons i:hover{
+     color: var(--main-color);
+ 
+ }
+ #menu-icon{
+     font-size: 34px;
+     color: var(--text-color);
+     z-index: 10001;
+     margin-right: 20px;
+     display: none;
+ 
+ }
+ header.sticky{
+     background: var(--bg-color);
+     padding: 14px 14%;
+     box-shadow: 0px 0px 10px rgb(0 0 0 /10);
+ }
+ }
+@media (max-width : 670px){
+    #menu-icon{
+      display: block;
+    }
+    .header-icons{
+        display: inline-flex;
+
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 240px;
+        height: 80vh;
+        background: var(--bg-color);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 80px 15px;
+        transition: all .45s ease;
+        
+       
+    }
+    .navlist a{
+        display: block;
+        margin: 1.1rem;
+        
+
+    }
+    .navlist.open{
+        left: 0;
+
+    }
+}
+#navbarDropdown{
+    margin-bottom: 11px;
+}
+.navlist li a{
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+.navlist{
+    margin-top: 25px;
+
+}
+.logo{
+    margin-top: -50px;
+    font-size: 28px;
+}
+
+.ilogo{
+    height: 45px;
+    width: 45px;
+    margin: 9px 9px;
+    border-radius: 49px;
+}
+.logo{
+    margin-top: 10px;
+    font-size: 22px;
+}
+.logo:hover{
+    color: var(--main-color);
+}
+#abckk{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dropdown-menu{
+    margin-bottom: -5px;
+}
+.main-contact h3:hover{
+color: var(--main-color);
+}
+.main-contact a{
+    padding: 10px;
+
+}
+#ascd{
+    margin-top: 30px;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 9999;
+    animation: fadeIn 0.3s;
+}
+
+#popup.show {
+    display: block;
+}
+
+#popup p {
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#popup button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 140px;
+}
+
+#popup button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #333;
+}
+.rating-stars {
+font-size: 22px;
+color: gold;
+text-align: left;
+margin-top: 3px;
+}
+.card:hover img.active {
+opacity: 0;
+}
+
+.card:hover img.inactive {
+opacity: 1;
+}
+.description-slide p h2{
+font-family: poppins;
+font-weight: bolder;
+
+
+}
+.description-slide p h2:hover{
+color: #c8815f;
+}
+.rating-stars span:hover{
+color: orange;
+}
+p:hover{
+color:#c8815f;
+}
+.card-details h3:hover{
+color: #c8815f;
+}
+.price:hover{
+color: black;
+}
+.new-a{
+    display: flex;
+    margin-top: 30px;
+}
+.new-arrival{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    position: relative;
+}
+
+.nav-item.dropdown .dropdown-menu .additional-items {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    background-color: #fff;
+    border: 2px solid #ccc; 
+    z-index: 15;
+    text-align: left;
+}
+
+.nav-item.dropdown .dropdown-menu li:hover .additional-items {
+    display: block;
+}
+.primary-text h6{
+    backdrop-filter: blur(2px);
+}
+.primary-text h3{
+    backdrop-filter: blur(1px);
+}
+#rn{
+    margin-bottom: -12px;
+}
+    
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    text-align: center; 
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.navlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    font-size: 24px;
+}
+
+#menu-icon {
+    display: none; 
+}
+
+
+@media (max-width: 670px) {
+    .logo {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%; 
+        margin: 0 auto; 
+    }
+
+    
+    .navlist {
+        display: block; 
+        text-align: center; 
+    }
+    .navlist li {
+        margin-bottom: 10px; 
+    }
+
+    #menu-icon {
+        display: block; 
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    
+    .dropdown-menu {
+        position: relative;
+    }
+
+    .dropdown-menu .dropdown-item {
+        text-align: center;
+    }
+
+    .additional-items {
+        display: none; 
+    }
+
+    .nav-item:hover .additional-items {
+        display: block; 
+    }
+}
+
+.logo{
+    font-size: 24px;
+}
+/* Cart box styling */
+.cart-box {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s;
+        }
+
+        .cart-box.open {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .cart-items {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .cart-item button {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #c82333;
+        }
+
+        .close-cart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .checkout {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .checkout button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .checkout button:hover {
+            background-color: #218838;
+        }
+
+
+.logo{
+    margin-top: -10px;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+}
+.login-main-popup {
+    display: none;
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    transition: 0.5s;
+    animation: popup-fade-in 0.5s ease-in-out;
+  }
+  
+@keyframes popup-fade-in {
+    from {
+        transform: none;
+    }
+    to {
+        transform: (0.5);
+    }
+}
+  /* Form Container */
+  .login-container{
+    width: 400px;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .login-heading{
+    color: #fff;
+    font-weight: 900;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
+  .formgroup{
+    position: relative;
+    width: 330px;
+    margin: 30px 0;
+    border-bottom: 3px solid #fff;
+  }
+
+  .formgroup input{
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 0 30px 0 10px;
+  }
+
+  .formgroup label{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%);
+    color: #fff;
+    font-size: 1.2em;
+    transition: 0.5s;
+  }
+
+  input:focus ~ label,
+  input:valid ~ label{
+    top: -5px;
+  }
+
+  .formgroup i{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%);
+    color: #fff;
+    font-size: 1.2em;
+  }
+
+  .error-message {
+    color: #ff4d4d;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+  }
+
+  .login-button{
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .login-para{
+    text-align: center;
+    color: #fff;
+    
+  }
+  .login-para>a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .login-para>a:hover{
+    text-decoration: underline;
+    font-style: italic;
+  }
+  .login-button:hover{
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+  }
+
+  .lnh{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .ah{
+    text-decoration: none;
+    font-size: medium;
+  }
+
+  .ah:hover{
+    text-decoration: underline;
+    font-style: italic;
+  }
+  .login-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 3;
+        }
+  .login-popup-btn{
+    margin-top: 10px;
+    background-color: #1691d3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-popup button:hover {
+    background-color: #1d10a9;
+  }
+  .login-popup-close{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  .login-popup-close:hover{
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+  }
+  @media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* Footer Base Styles */
+.custom-footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 calc(25% - 20px); /* Ensures 4 sections per row */
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ff9800;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin: 8px 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.footer-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-icons a{
+    font-size: 25px;
+    color: white;
+    transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.footer-icons #facbok:hover {
+    color: #03a9f5;
+    transform: scale(1.1);
+}
+.footer-icons #insta:hover {
+    color: palevioletred;
+    transform: scale(1.1);
+}
+.footer-icons #youtub:hover {
+    color: red;
+    transform: scale(1.1);
+}
+.footer-icons #whtsapp:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+.footer-img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+/* RESPONSIVENESS */
+
+/* Tablet - 2 Columns */
+@media (max-width: 900px) {
+    .footer-section {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Mobile - 1 Column */
+@media (max-width: 600px) {
+    .footer-section {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-icons {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-section ul {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+ .ilogo{
+    margin-top: 10px;
+}
+.logo{
+    margin-top: 20px;
+}
+.nav-item {
+    margin-top: -8px;
+}
+.txt h2{
+text-align: center;
+margin: 35px 20px;
+letter-spacing: 3px;
+font-family: poppins;
+font-weight: 600;
+}
+
+.txt h2:hover{
+    color: var(--main-color);
+}
+
+.dropdown-menu.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 0;
+    z-index: 1050;
+}
+.nav-item .dropdown-menu.show {
+    display: block;
+}
+/* sitemap popup style */
+body.blur {
+    filter: blur(5px);
+    pointer-events: none;
+}
+.sitepopup{
+    display: none;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    text-align: center;
+    width: 1300px;
+    height: 550px;
+    transition: 0.5s;
+    animation: sitepopup-fade-in 0.5s ease-in-out;
+  }
+  @keyframes sitepopup-fade-in{
+    from {
+        transform: none;
+    }
+    to {
+        transform: (0.5);
+    }
+}
+  .siteimg{
+    width: 100%;
+    height: 100%;
+  }
+  #close-sitepopup{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+  }
+  /* Responsive Prose  */
+  @media screen and (max-width: 768px){
+    .prose{
+            width: 300px;
+            background-color: #222323;
+            color: #FFFFFF;
+            text-align: center;
+            align-items: center;
+            padding: 50px;
+            margin-bottom: 50px;
+        }
+  }
+/* Responsive Site map  */
+@media screen and (max-width: 768px) {
+    .sitepopup{
+    display: none;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    text-align: center;
+    width: 350px;
+    height: 300px;
+    transition: 0.5s;
+    animation: sitepopup-fade-in 0.5s ease-in-out;
+  }
+  .siteimg{
+    width: 100%;
+    height: 300px;
+  }
+  #close-sitepopup{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: #333;
+  }
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cart-box {
+        width: 100%;
+        right: -100%;
+    }
+
+    .cart-box.open {
+        right: 0;
+    }
+
+    .cart-header {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .checkout-button-a {
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item button {
+        width: 80%;
+        margin-top: 5px;
+    }
+}
+  /* Responsive Login Form*/
+  @media (max-width: 400px) {
+    .login-main-popup {
+        width: 95%;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .formgroup {
+        width: 100%;
+    }
+
+    .formgroup input {
+        height: 45px;
+        font-size: 1em;
+    }
+
+    .login-heading {
+        font-size: 1.5em;
+    }
+
+    .login-button {
+        height: 40px;
+        font-size: 1em;
+    }
+
+    .login-popup {
+        width: 80%;
+    }
+
+    .login-popup h4 {
+        font-size: 1em;
+    }
+
+    .login-popup-btn {
+        padding: 8px 16px;
+    }
+}
+@media (max-width : 670px){
+   .logo{
+    margin-bottom: 15px;
+    font-size: 15px;
+   }
+   .ilogo{
+    width: 30px;
+    height: 30px;
+   }
+   .ban-j{
+    width: 100%;
+    height: 350px;
+   }
+   .ban-j img{
+    width: 100%;
+    height: 350px;
+   }
+   header.sticky{
+    padding: 0 0 0 0;
+    background: var(--bg-color);
+    box-shadow: 0px 0px 10px rgb(0 0 0 /10);
+}
+}
+.gamepopup { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100vh; 
+            background: rgba(0, 0, 0, 0.5); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            visibility: hidden; 
+            opacity: 0; 
+            transition: 0.3s; 
+            padding: 10px;
+            z-index: 2000;
+        }
+        .gamepopup.active { visibility: visible; opacity: 1; }
+
+        .popup-content { 
+            top: 5%;
+            padding: 20px;  
+            position: relative; 
+            width: 90%; 
+            max-width: 400px;
+            text-align: center; 
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-btn { 
+            position: absolute; 
+            top: 0; 
+            right: 15px; 
+            font-size: 22px; 
+            cursor: pointer; 
+            color: #FFFFFF;
+        }
+
+        .game-board { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 5px; 
+            justify-content: center; 
+            margin: 20px auto; 
+            width: 100%;
+            max-width: 300px;
+        }
+        .gameheading{
+            margin-top: 15px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .cell { 
+            width: 100%; 
+            aspect-ratio: 1/1; 
+            border: 2px solid black; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 5vw; 
+            cursor: pointer; 
+            transition: 0.2s;
+            background: white;
+        }
+
+        .cell:hover { background: #f0f0f0; }
+
+        .restartbtn { 
+            margin-top: 15px; 
+            padding: 8px 18px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            border-radius: 6px; 
+            background: white; 
+            border: none; 
+            transition: 0.3s; 
+        }
+
+        .restartbtn:hover {
+            background-color: rgba(0,0,0,0.3);
+            color: #fff;
+        }
+
+        .message { font-size: 16px; margin-top: 10px; font-weight: bold; color: #FFFFFF;}
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 800px) {
+            .popup-content { width: 95%; padding: 15px; }
+            .game-board { max-width: 250px; }
+            .cell { font-size: 7vw; } /* Adjust font size for smaller screens */
+            .restartbtn { font-size: 14px; padding: 10px; }
+            .game-btn { font-size: 16px; padding: 10px 20px; }
+            .message { font-size: 14px; }
+        }
+
+        @media (max-width: 400px) {
+            .gamepopup{ width: 100%; height: 100%;}
+            .game-board { max-width: 200px; }
+            .cell { font-size: 8vw; } /* Larger font for tiny screens */
+            .popup-content { padding: 10px; }
+            .gameheading{
+                font-size: 12px;
+            }
+            .restartbtn{
+                padding: 6px 12px;
+            }
+        }
+    
+</style>
+
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+<body>
+    <header>
+        <div class="less-blur">
+    <a href="/Jewlery/Assets/HTML/first_fashion.html" class="logo"><img class="ilogo" src="/Logo/firstfashionlogo.jpg" alt="">First Fashion</a>
+</div>
+   
+    <ul class="navlist">
+        <li id="abckk" ><a href="./first_fashion.html">Home</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="nav-item dropdown">
+                    <a class="dropdown-item dropdown-toggle" href="#" id="menDropdown">Men's Fashion</a>
+                    <ul class="dropdown-menu submenu" id="menSubmenu">
+                        <li><a class="dropdown-item" href="/Mensection/menFF.html">Clothes</a></li>
+                        <li><a class="dropdown-item" href="/mens/menshoes.html">Shoes</a></li>
+                        <li><a class="dropdown-item" href="/Jewlery/Assets/HTML/watches.html">Watches</a></li>
+                    </ul>
+                </li>
+            
+            </ul>
+        </li>
+        <li id="abckk" ><a href="/Womensection/womenFF.html">Clothes</a></li>
+        <li id="abckk" ><a href="/women shoes.html/womenboot.html">Shoes</a></li>
+       
+
+
+    </ul>
+    <div class="header-icons">
+        <a href="#" id="login-link"><i class='bx bxs-user'></i></a>
+        <a href="#" onclick="toggleCart()"><i class='bx bx-shopping-bag'></i></a>
+        
+      <div class="bx bx-menu" id="menu-icon">
+    
+        
+      </div>
+    </div>
+</header>
+    <div class="ban-j">
+        <img src="/Jewlery/banner-4.webp" height="530px" width="100%" alt="">
+    </div>
+
+    <div class="txt">
+        <H2>Necklaces:</H2>
+    </div>
+    <div class="container">
+  
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2023-11-17at3.55.06PM_350x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Elegant Heart Necklace</h3>
+            <p class="item-price">$199.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2023-10-01at10.26.06PM_2_1800x1800_9109cf06-c3a3-4ff2-9cc5-371a9873fdd6_550x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Prominent Necklace</h3>
+            <p class="item-price">$149</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2023-09-30at2.59.27AM_small.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Diamond Necklace</h3>
+            <p class="item-price">$499.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsApp_Image_2025-01-23_at_9.30.18_AM_550x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Pink Bride Necklace</h3>
+            <p class="item-price">$299.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+   
+   
+ 
+  
+    </div>
+    <div class="container">
+  
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2023-11-21at11.12.07AM_350x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Wedding Necklace</h3>
+            <p class="item-price">$299</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2023-10-21at6.28.28AM_350x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Bride Necklace</h3>
+            <p class="item-price">$399</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2023-10-01at10.26.06PM_2_1800x1800_9109cf06-c3a3-4ff2-9cc5-371a9873fdd6_550x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Bride Sturf Necklace</h3>
+            <p class="item-price">$499</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/WhatsAppImage2022-02-24at12.10.10PM_350x.jpg" alt="Elegant Necklace">
+            <h3 class="item-name">Ruby Necklace</h3>
+            <p class="item-price">$199</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+   
+   
+ 
+  
+    </div>
+
+    <div class="txt">
+        <H2>Earings:</H2>
+    </div>
+    <div class="container">
+  
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-1.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Earing Pacl</h3>
+            <p class="item-price">$29</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-2.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Leaf Earings</h3>
+            <p class="item-price">$39</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-4.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Ruby Earings</h3>
+            <p class="item-price">$19</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-5.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Button Earings</h3>
+            <p class="item-price">$24.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+   
+   
+ 
+  
+    </div>
+    <div class="container">
+  
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-3.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Glore Earing</h3>
+            <p class="item-price">$14.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-2.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Sober Earing</h3>
+            <p class="item-price">$19.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-8.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Wedding Esaring</h3>
+            <p class="item-price">$29.9p</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/j-e-7.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Bride Earing</h3>
+            <p class="item-price">$49.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+   
+
+        
+   
+ 
+  
+    </div>
+    
+    <div class="txt">
+        <H2>Bracelet :</H2>
+    </div>
+    <div class="container">
+  
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/br-2.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Elegant Bracelet</h3>
+            <p class="item-price">$169.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/bracelet.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Gold Bracelet</h3>
+            <p class="item-price">$149.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/br-5.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Bracelet Set </h3>
+            <p class="item-price">$49.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/br-4.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Black Scap Bracelet</h3>
+            <p class="item-price">$89.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+   
+   
+ 
+  
+    </div>
+    <div class="container">
+  
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/br-6.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Rawayat Bracelet</h3>
+            <p class="item-price">$49.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/br-5.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Sober Bracelet</h3>
+            <p class="item-price">$39.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/bracelet.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Gold Bracelet</h3>
+            <p class="item-price">$159.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+        <div class="card-a" id="jewelry">
+            <img src="/Jewlery/br-4.webp" alt="Elegant Necklace">
+            <h3 class="item-name">Ingraged Bracelet</h3>
+            <p class="item-price">$29.99</p>
+            <button class="add-to-cart" onclick="showPopup()">Add to Cart</button>
+        </div>
+
+
+    </div>
+   
+
+            
+<div class="formmmmm">
+    <div class="login-main-popup" id="login-popup">
+        <div class="login-container">
+          <h2 class="login-heading">Login</h2>
+          <form id="login-form">
+            <div class="formgroup">
+              <input type="text" id="username" required>
+              <label>User Name</label>
+              <i class="fa-solid fa-envelope"></i>
+              <div class="error-message" id="username-error">Please enter a valid username with at least 3 characters.</div>
+            </div>
+    
+            <div class="formgroup">
+              <input type="password" id="password" required>
+              <label>Password</label>
+              <i class="fa-solid fa-lock"></i>
+              <div class="error-message" id="password-error">Please enter a valid password with at least 6 characters.</div>
+            </div>
+    
+            <p class="login-para">
+              <input type="checkbox" id="remember-me"> Remember Me
+              <a href="#">Forgot Password</a>
+            </p>
+    
+            <button type="button" class="login-button" id="login-btn">Login</button>
+    
+            <p class="login-para">Don't have an account <a href="#">Register</a></p>
+            
+          </form>
+          <button class="login-popup-close" id="close-popup">Close</button>
+          
+        </div>
+      </div>
+    
+      <!-- Thank You Popup -->
+      <div class="login-popup" id="thankyou-popup">
+        <h4 class="login-popup-hed">Thank you! Your details have been submitted</h4>
+        <button class="login-popup-btn" id="close-thankyou-popup">Ok</button>
+      </div>
+
+   <!--GAme-->
+<div class="gamepopup" id="gamePopup" onclick="closePopup(event)">
+    <div class="popup-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h6 class="gameheading">Play Game until your order is proceeding</h6>
+        <div class="game-board">
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="message">Player X's turn</div>
+        <button class="restartbtn">Restart</button>
+    </div>
+</div>
+ 
+  
+    </div>
+    <!-- <div id="popup" class="popup hidden">
+        <p>Great Choice! Your Purchase Has Been Added To The Cart</p>
+    </div> -->
+
+    <!-- Sitemap popup -->
+
+<div class="sitepopup" id="popupsite">
+    <div class="site" id="site">
+        <button id="close-sitepopup">&times;</button>
+        <img src="/Logo/Site map 2.jpg" class="siteimg">
+    </div>
+</div>
+   <!-- Custom Footer -->
+<footer class="custom-footer" id="unique-footer">
+    <div class="footer-container">
+        
+        <div class="footer-section" id="footer-brand">
+            <h3>First Fashion</h3>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/profile.php?id=61573026815423&sk=about"><i class='bx bxl-facebook-square' id="facbok"></i></a>
+                <a href="https://www.instagram.com/ig_icy_op?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class='bx bxl-instagram-alt' id="insta"></i></a>
+                <a href="https://www.youtube.com/channel/UCBwTjUmcVGubFbtJhnycTWQ"><i class='bx bxl-youtube' id="youtub"></i></a>
+                <a href="https://whatsapp.com/channel/0029VaFdrFg60eBoh2h9Fq30"><i class='bx bxl-whatsapp' id="whtsapp"></i></a>
+            </div>
+            <div class="cont-mail">
+                <h6>Contact :</h6><a href="tel:+123 456 7890"><h6>+123 456 7890</h6></a>
+                <h6>Email :</h6><a href="mailto:firstfashion78@gmail.com"><h6>firstfashion@gmail.com</h6></a>
+            </div>
+        </div>
+
+        <div class="footer-section" id="footer-explore">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="/Assets/HTML/first_fashion.html">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id="footer-services">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#site-map" id="site-link">Site Map</a></li>
+                <li><a href="/Product Details/Documentation.docx">Documentation</a></li>
+                <li><a href="/Product Details/First Fashion.docx">Product Details</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id="footer-shopping">
+            <h3>Shopping</h3>
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="/Womensection/womenFF.html">Clothes</a></li>
+                <li><a href="/Assets/HTML/jewlerry.html">Jewellery</a></li>
+                <li><a href="/women shoes.html/womenboot.html">Shoes</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright <i class='bx bxs-copyright'></i> 2024 All rights reserved | Made by Hasnain, Sabih, Ram & Aliza</p>
+    </div>
+</footer>
+
+     <!--Cart-->
+<div class="cart-box" id="cartBox">
+    <div class="cart-header">
+        My Cart
+        <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">  
+    </div>
+    <div class="checkout">
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+</body>
+
+ 
+       <script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+
+const gamePopup = document.getElementById('gamePopup');
+        const gameCells = document.querySelectorAll('.cell');
+        const restartbtn = document.querySelector('.restartbtn');
+        const message = document.querySelector('.message');
+        let currentPlayer = 'X';
+        let board = ["", "", "", "", "", "", "", "", ""];
+        let gameActive = true;
+
+        const openPopup = () => {
+            gamePopup.classList.add('active');
+            startGame();
+        };
+
+        const closePopup = () => {
+            gamePopup.classList.remove('active');
+            resetGame();
+        };
+
+        const startGame = () => {
+            gameCells.forEach((cell, index) => {
+                cell.textContent = '';
+                cell.classList.remove('win');
+                cell.addEventListener('click', () => handleClick(index), { once: true });
+            });
+            board = ["", "", "", "", "", "", "", "", ""];
+            gameActive = true;
+            message.textContent = "Player X's turn";
+        };
+
+        const handleClick = (index) => {
+            if (board[index] !== "" || !gameActive) return;
+            board[index] = currentPlayer;
+            gameCells[index].textContent = currentPlayer;
+
+            if (checkWin()) {
+                message.textContent = `Player ${currentPlayer} wins!`;
+                gameActive = false;
+                highlightWin();
+            } else if (board.every(cell => cell !== "")) {
+                message.textContent = "It's a tie!";
+                gameActive = false;
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                message.textContent = `Player ${currentPlayer}'s turn`;
+            }
+        };
+
+        const checkWin = () => {
+            const winConditions = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+
+            return winConditions.some(condition => {
+                const [a, b, c] = condition;
+                return board[a] && board[a] === board[b] && board[a] === board[c];
+            });
+        };
+
+        const highlightWin = () => {
+            const winConditions = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+
+            winConditions.forEach(condition => {
+                const [a, b, c] = condition;
+                if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                    gameCells[a].classList.add('win');
+                    gameCells[b].classList.add('win');
+                    gameCells[c].classList.add('win');
+                }
+            });
+        };
+
+        const resetGame = () => {
+            currentPlayer = 'X';
+            gameActive = true;
+            board = ["", "", "", "", "", "", "", "", ""];
+            message.textContent = "Player X's turn";
+            gameCells.forEach(cell => {
+                cell.textContent = '';
+                cell.classList.remove('win');
+            });
+            startGame();
+        };
+
+        restartbtn.addEventListener('click', resetGame);
+        // Open site popup when clicking on site link
+        document.getElementById('site-link').addEventListener('click', function() {
+      document.getElementById('popupsite').style.display = 'block';
+      body.classList.add("blur");   // Apply blur effect
+    });
+
+        // Open site popup when clicking on site link
+        document.getElementById('site-link').addEventListener('click', function() {
+      document.getElementById('popupsite').style.display = 'block';
+      body.classList.add("blur");   // Apply blur effect
+    });
+
+    // Close site popup when clicking on Close button
+    document.getElementById('close-sitepopup').addEventListener('click', function() {
+      document.getElementById('popupsite').style.display = 'none';
+      body.classList.remove("blur"); // Remove blur effect
+    });
+
+const header =document.querySelector("header");
+         window.addEventListener("scroll",function(){
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+         });
+         let menu = document.querySelector('#menu-icon');
+         let navlist = document.querySelector('.navlist');
+
+         menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navlist.classList.toggle('open');}
+         const sr = ScrollReveal({
+            distance : '30px',duration : 2600,
+            reset : true
+         })
+         sr.reveal('.home-text',{delay : 280, origin: 'bottom'});
+
+    document.querySelectorAll('.navlist a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+
+    
+    const myHeader = document.querySelector("header");
+    window.addEventListener("scroll", function () {
+        myHeader.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    let myMenu = document.querySelector('#menu-icon');
+    let myNavList = document.querySelector('.navlist');
+
+    myMenu.onclick = () => {
+        myMenu.classList.toggle('bx-x');
+        myNavList.classList.toggle('open');
+    };
+
+   
+    const uniqueHeader = document.querySelector("header");
+    window.addEventListener("scroll", function () {
+        uniqueHeader.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    let uniqueMenu = document.querySelector('#menu-icon');
+    let uniqueNavList = document.querySelector('.navlist');
+
+    uniqueMenu.onclick = () => {
+        uniqueMenu.classList.toggle('bx-x');
+        uniqueNavList.classList.toggle('open');
+    };
+
+    const uniqueScrollReveal = ScrollReveal({
+        distance: '30px',
+        duration: 2600,
+        reset: true
+    });
+    uniqueScrollReveal.reveal('.home-text', { delay: 280, origin: 'bottom' });
+
+    document.querySelectorAll('.navlist a').forEach(uniqueAnchor => {
+        uniqueAnchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    let cartBox = document.getElementById('cartBox');
+let cartItemsContainer = document.getElementById('cartItems'); // Use existing element
+
+// Add event listeners to all "Add to Cart" buttons
+document.querySelectorAll('.add-to-cart').forEach((button) => {
+    button.addEventListener('click', function () {
+        let card = this.closest('.card-a');
+        let itemName = card.querySelector('.item-name').textContent;
+        let itemPrice = card.querySelector('.item-price').textContent;
+
+        addToCart(itemName, itemPrice);
+    });
+});
+
+let cart = []; // Define the global cart array
+
+function addToCart(name, price) {
+    cart.push({ name, price }); // Add item to cart
+    updateCartUI();
+    cartBox.classList.add('open'); // Open the cart box
+}
+
+function updateCartUI() {
+    cartItemsContainer.innerHTML = ''; // Clear existing items
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>There are no items in the cart.</p>';
+    } else {
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+
+            cartItem.innerHTML = `
+                <span>${item.name}</span>
+                <span>${item.price}</span>
+                <button class="remove-item">Remove</button>
+            `;
+
+            cartItem.querySelector('.remove-item').addEventListener('click', () => {
+                removeItem(index);
+            });
+
+            cartItemsContainer.appendChild(cartItem);
+        });
+    }
+}
+document.querySelectorAll('.navlist a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        if (href.startsWith("#")) { // Only prevent default if it's a section scroll
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            window.location.href = href; // Allow normal navigation for page links
+        }
+    });
+});
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty.');
+        return;
+    }
+
+    const confirmation = confirm(
+        'Proceed to checkout with the following items:\n' +
+        cart.map(item => `${item.name} - ${item.price}`).join('\n')
+    );
+
+    if (confirmation) {
+        alert('Thank you for your purchase!');
+        cart = [];
+        updateCartUI();
+        toggleCart();
+        openPopup();
+    }
+}
+
+function toggleCart() {
+    cartBox.classList.toggle('open');
+}
+// Open login popup when clicking on Login link
+document.getElementById('login-link').addEventListener('click', function() {
+    document.getElementById('login-popup').style.display = 'block';
+  });
+
+  // Close login popup when clicking on Close button
+  document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('login-popup').style.display = 'none';
+  });
+
+  // Handle form validation on login button click
+  document.getElementById('login-btn').addEventListener('click', function () {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    const usernameError = document.getElementById('username-error');
+    const passwordError = document.getElementById('password-error');
+
+    // Reset error messages
+    usernameError.style.display = 'none';
+    passwordError.style.display = 'none';
+
+    let isValid = true;
+
+    // Check for empty fields
+    if (!username && !password) {
+      usernameError.innerText = 'Username cannot be empty.';
+      usernameError.style.display = 'block';
+
+      passwordError.innerText = 'Password cannot be empty.';
+      passwordError.style.display = 'block';
+
+      isValid = false;
+    } else {
+      // Validate username
+      if (username.length < 3) {
+        usernameError.innerText = 'Please enter a valid username with at least 3 characters.';
+        usernameError.style.display = 'block';
+        isValid = false;
+      }
+
+      // Validate password
+      if (password.length < 6) {
+        passwordError.innerText = 'Please enter a valid password with at least 6 characters.';
+        passwordError.style.display = 'block';
+        isValid = false;
+      }
+    }
+
+    // If validation passes, show thank you popup and reset the form
+    if (isValid) {
+      const popup = document.getElementById('thankyou-popup');
+      popup.style.display = 'block';
+
+      // Reset form fields
+      document.getElementById('login-form').reset();
+      document.getElementById('login-popup').style.display = 'none';
+    }
+
+  });
+   // Close thank you popup
+    document.getElementById('close-thankyou-popup').addEventListener('click', function () {
+      document.getElementById('thankyou-popup').style.display = 'none';
+    });
+
+
+  // Toggle the "scrolled" class based on window scroll position
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var mainDropdown = document.getElementById('navbarDropdown');
+    mainDropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    document.querySelectorAll('.dropdown-item.dropdown-toggle').forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var submenu = this.nextElementSibling;
+            submenu.classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('click', function() {
+        document.querySelectorAll('.submenu').forEach(function(menu) {
+            menu.classList.remove('show');
+        });
+    });
+});
+    </script>
+
+</html>

@@ -1,0 +1,47 @@
+[
+    {
+      "name": "POLO SWEATER",
+      "price": 20.99,
+      "images": [
+        "/latest-img/Boy/SWC25-1Sage_1.jpg",
+        "/latest-img/Boy/SWC25-1Sage_4.jpg"
+      ],
+      "rating": 4,
+      "description": "The image shows a person standing against a solid red background. The person is wearing a black hoodie with the word 'DREAM' written in large yellow letters on the front, along with some smaller white text above it.",
+      "shopAddress": "30-A, Progressive Center, Suite # 202-203, Main Shahra-e-Faisal, near Lal Kothi, Karachi, 75400, Pakistan"
+    },
+    {
+      "name": "Sweat Shirt",
+      "price": 20.99,
+      "images": [
+        "/latest-img/Boy/SWC25-13_2.jpg",
+        "/latest-img/Boy/SWC25-13_4.jpg"
+      ],
+      "rating": 4,
+      "description": "The image shows a person standing against a solid red background. The person is wearing a black hoodie with the word 'DREAM' written in large yellow letters on the front, along with some smaller white text above it.",
+      "shopAddress": "30-A, Progressive Center, Suite # 202-203, Main Shahra-e-Faisal, near Lal Kothi, Karachi, 75400, Pakistan"
+    },
+    {
+      "name": "Black Kurta",
+      "price": 20.99,
+      "images": [
+        "/latest-img/Boy/ak-7.webp",
+        "/latest-img/Boy/ak-8.webp"
+      ],
+      "rating": 4,
+      "description": "The image shows a person standing against a solid red background. The person is wearing a black hoodie with the word 'DREAM' written in large yellow letters on the front, along with some smaller white text above it.",
+      "shopAddress": "30-A, Progressive Center, Suite # 202-203, Main Shahra-e-Faisal, near Lal Kothi, Karachi, 75400, Pakistan"
+    },
+    {
+      "name": "Brown Kurta",
+      "price": 20.99,
+      "images": [
+        "/latest-img/Boy/ak-11.webp",
+        "/latest-img/Boy/ak-12.webp"
+      ],
+      "rating": 4,
+      "description": "The image shows a person standing against a solid red background. The person is wearing a black hoodie with the word 'DREAM' written in large yellow letters on the front, along with some smaller white text above it.",
+      "shopAddress": "30-A, Progressive Center, Suite # 202-203, Main Shahra-e-Faisal, near Lal Kothi, Karachi, 75400, Pakistan"
+    }
+  ]
+  
